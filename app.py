@@ -49,10 +49,10 @@ solid_yield=st.sidebar.slider('Solid-carbon yield (%)',0,100,0)
 i=Inputs(flow,water_rec,desal,salt_rec,feed_t,steam_t,reactor_t,pressure,power,hours,plasma_eff,thermal,argon,argon_rec,renew,grid,benchmark,carbon_feed,carbon_capture,solid_yield,**wp)
 r=calculate(i); comp=compare_profiles(i,PROFILES); rel=reliability_map()
 
-st.markdown('<div class="topbar"><div class="brand">HYDROGEN<span>ORG.CH</span> · INTEGRATED RESEARCH SIMULATOR V3.1</div><div class="sys">SYSTEM ONLINE · MODEL TRANSPARENT · VALIDATION REQUIRED</div></div>',unsafe_allow_html=True)
+st.markdown('<div class="topbar"><div class="brand">HYDROGEN<span>ORG.CH</span> · INTEGRATED RESEARCH SIMULATOR V3.2</div><div class="sys">SYSTEM ONLINE · MODEL TRANSPARENT · VALIDATION REQUIRED</div></div>',unsafe_allow_html=True)
 
 if page=='Mission Control':
- st.markdown('''<div class="hero"><div><div class="kicker">HydrogenOrg integrated research platform V3</div><div class="title">Water, Plasma, Hydrogen and <span>Climate Intelligence.</span></div><div class="lead">A redesigned research, engineering and executive environment with an interactive 3D reactor twin, energy and matter Sankey, live analytics, multi-scenario comparison, sensitivity, constrained optimization and technical reporting.</div></div><div class="hero-panel"><b>Transparent before persuasive.</b><p>Every result is labelled as consolidated, engineering estimate, scenario model or research hypothesis.</p></div></div>''',unsafe_allow_html=True)
+ st.markdown('''<div class="hero"><div><div class="kicker">HydrogenOrg integrated research platform V3.2</div><div class="title">Water, Plasma, Hydrogen and <span>Climate Intelligence.</span></div><div class="lead">A redesigned research, engineering and executive environment with an interactive 3D reactor twin, energy and matter Sankey, live analytics, multi-scenario comparison, sensitivity, constrained optimization and technical reporting.</div></div><div class="hero-panel"><b>Transparent before persuasive.</b><p>Every result is labelled as consolidated, engineering estimate, scenario model or research hypothesis.</p></div></div>''',unsafe_allow_html=True)
  st.markdown(f'''<div class="metrics"><div class="metric"><small>Hydrogen output</small><strong>{r['h2_kg_day']:.2f} kg/day</strong><em>Energy and water constrained</em></div><div class="metric"><small>Net electricity</small><strong>{r['sec_kwh_kg']:.1f} kWh/kg</strong><em>Full operating boundary</em></div><div class="metric"><small>HHV efficiency</small><strong>{r['hhv_eff_pct']:.1f}%</strong><em>Boundary dependent</em></div><div class="metric"><small>Climate delta</small><strong>{r['avoided_co2_kg_day']:.1f} kg CO2/day</strong><em>Vs selected benchmark</em></div></div>''',unsafe_allow_html=True)
  if mode=='Executive':
   c1,c2=st.columns([1.2,.8]);
@@ -124,9 +124,9 @@ elif page=='Scientific Basis':
 elif page=='Technical Report':
  st.markdown('## Technical report and data export')
  pdf=build_pdf('HydrogenOrg Integrated Climate & Hydrogen Simulator V3.2',profile_name,asdict(i),r,comp,rel)
- st.download_button('Download technical PDF',pdf,'HydrogenOrg_V3_Technical_Report.pdf','application/pdf',type='primary')
- st.download_button('Download scenario JSON',json.dumps({'profile':profile_name,'inputs':asdict(i),'results':r,'comparisons':comp,'reliability':rel},indent=2),'HydrogenOrg_V3_Scenario.json','application/json')
- st.download_button('Download comparison CSV',pd.DataFrame(comp).to_csv(index=False).encode('utf-8'),'HydrogenOrg_V3_Comparison.csv','text/csv')
+ st.download_button('Download technical PDF',pdf,'HydrogenOrg_V3_2_Technical_Report.pdf','application/pdf',type='primary')
+ st.download_button('Download scenario JSON',json.dumps({'profile':profile_name,'inputs':asdict(i),'results':r,'comparisons':comp,'reliability':rel},indent=2),'HydrogenOrg_V3_2_Scenario.json','application/json')
+ st.download_button('Download comparison CSV',pd.DataFrame(comp).to_csv(index=False).encode('utf-8'),'HydrogenOrg_V3_2_Comparison.csv','text/csv')
 
 else:
  st.markdown('## Research limits and falsifiability')

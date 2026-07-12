@@ -4,7 +4,7 @@ Finalizes the 3D Digital Twin opening view: larger reactor, closer initial camer
 
 Deploy with Python 3.12 and main file `app.py`.
 
-# HydrogenOrg Integrated Climate & Hydrogen Simulator V3
+# HydrogenOrg Integrated Climate & Hydrogen Simulator V3.2
 
 A redesigned Streamlit research platform with:
 
