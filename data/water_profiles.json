@@ -1,0 +1,68 @@
+{
+  "Purified water": {
+    "sal": 0.02,
+    "cl": 0.005,
+    "so4": 0.003,
+    "mg": 0.001,
+    "ca": 0.002,
+    "hco3": 0.01,
+    "boron": 0.0,
+    "silica": 0.0,
+    "bromide": 0.0
+  },
+  "Brackish water": {
+    "sal": 5.0,
+    "cl": 2.7,
+    "so4": 0.4,
+    "mg": 0.18,
+    "ca": 0.12,
+    "hco3": 0.22,
+    "boron": 0.001,
+    "silica": 0.02,
+    "bromide": 0.003
+  },
+  "Baltic Sea": {
+    "sal": 7.0,
+    "cl": 3.8,
+    "so4": 0.55,
+    "mg": 0.25,
+    "ca": 0.14,
+    "hco3": 0.16,
+    "boron": 0.0015,
+    "silica": 0.01,
+    "bromide": 0.005
+  },
+  "Atlantic Ocean": {
+    "sal": 35.0,
+    "cl": 19.4,
+    "so4": 2.7,
+    "mg": 1.29,
+    "ca": 0.41,
+    "hco3": 0.14,
+    "boron": 0.0045,
+    "silica": 0.003,
+    "bromide": 0.067
+  },
+  "Mediterranean Sea": {
+    "sal": 38.0,
+    "cl": 21.0,
+    "so4": 2.8,
+    "mg": 1.35,
+    "ca": 0.42,
+    "hco3": 0.15,
+    "boron": 0.0048,
+    "silica": 0.003,
+    "bromide": 0.073
+  },
+  "Red Sea": {
+    "sal": 40.0,
+    "cl": 22.2,
+    "so4": 2.9,
+    "mg": 1.45,
+    "ca": 0.45,
+    "hco3": 0.15,
+    "boron": 0.005,
+    "silica": 0.003,
+    "bromide": 0.08
+  }
+}
