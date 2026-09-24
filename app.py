@@ -10,6 +10,11 @@ from views.charts import digital_twin_3d, sankey, live_timeseries, scenario_bars
 
 st.set_page_config(page_title='HydrogenOrg Integrated Climate & Hydrogen Simulator V3.2',page_icon='⚡',layout='wide',initial_sidebar_state='expanded')
 inject_style()
+
+# NAV-02: native navigation links, available in every workspace.
+st.link_button('← Back to HydrogenOrg', 'https://hydrogenorg.ch/', type='primary', help='Opens the website in a new tab and keeps this simulation available.')
+st.caption('Navigation update · NAV-02')
+st.sidebar.link_button('← Back to HydrogenOrg', 'https://hydrogenorg.ch/', help='Opens the website in a new tab.')
 PROFILES=json.loads((Path(__file__).parent/'data'/'water_profiles.json').read_text(encoding='utf-8'))
 
 st.sidebar.markdown('## HYDROGENORG')
